@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto 1 - Vista en 3D</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #81030327;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #790000;
+            margin-top: 20px;
+        }
+
+        model-viewer {
+            width: 80%;
+            height: 80vh;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(152, 0, 0, 0.289);
+        }
+
+        .back-btn {
+            background-color: #680700;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #af0f00;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cañón - Modelo 3D</h1>
+
+    <model-viewer src="assets/cañon.glb" alt="Producto 4"
+                  auto-rotate camera-controls
+                  ar ar-modes="webxr scene-viewer quick-look"
+                  shadow-intensity="1" environment-image="neutral">
+    </model-viewer>
+
+
+
+    <a href="index.html"><button class="back-btn">Volver al catálogo</button></a>
+
+</body>
+
+</html>
